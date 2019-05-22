@@ -26,7 +26,7 @@ export class ListsComponent {
     this.deleteItem.emit(item);
   }
 
-  addTodoItem(list: string, item: string) {
+  addTodoItem(list: string, item?: string) {
     item = item ? item : this.todoItem;
     this.service.addTodo(this.id, list, item);
     this.todoItem = "";
